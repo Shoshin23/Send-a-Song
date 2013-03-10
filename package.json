@@ -1,12 +1,11 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
+  "name": "Tring",
+  "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "start": "node app"
-  },
   "dependencies": {
     "express": "3.1.0",
-    "jade": "*"
+    "jade": "*",
+    "twilio-js": ">=0.0.1"
+	    
   }
 }

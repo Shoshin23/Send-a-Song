@@ -6,7 +6,7 @@
 var config = {
 	port: process.env.VMC_APP_PORT || 8080,
 
-	title: "Plush",
+	title: "Tring",
 //Get Account info twilio and soundcloud.
 	twilio: {
 		account_sid: "xxx", 
