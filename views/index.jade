@@ -1,5 +1,31 @@
-extends layout
+script 
+  var socketID = ${socketID};
 
-block content
-  h1= title
-  p Welcome to #{title}
+p Make a call to anyone and play a song for them through SoundCloud. 
+
+if (phonecall)
+  h2#phoneSuccess.success Woohoo Phone call was made!
+
+form#mainform
+  p
+    label Enter a URL from SoundCloud
+    input( name="url" )
+  p
+    label Enter a phone number(including country codee.g +91 for India)
+    input( name="to" )
+  p
+
+     button( type="submit" ) Make the call!
+
+code Fork me on <a href='https://github.com/shoshin23/Send-a-song>Github</a>
+
+script
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount','') //create account, get number
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript';ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementByTagName('script')[0]; s.parentNode.insertBefore(ga,s);
+    })();
