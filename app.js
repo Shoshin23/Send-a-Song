@@ -7,9 +7,9 @@ var config = {
 	port: process.env.VMC_APP_PORT || 8080,
 
 	title: "Plush",
-
+//Get Account info twilio and soundcloud.
 	twilio: {
-		account_sid: "xxx",
+		account_sid: "xxx", 
 		auth_token: "xxx",
 		number: "xxx"
 	},
@@ -79,7 +79,7 @@ app.get("/",function(req,res) {
 	getSoundcloudIDfromURL(url,function(id) {
 		
 		//create the phone call
-		var url = "http://wemakeawesomesh.it/soundcloudID/twiml.php?id="+id+"&socket_id="+socketID;
+		var url = "http://wemakeawesomesh.it/soundcloudID/twiml.php?id="+id+"&socket_id="+socketID; 
 		Twilio.Call.create({
 			to: req.query.to,
 			from:config.twilio.number, //your Twilio account number
