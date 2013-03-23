@@ -72,7 +72,7 @@ app.get("/",function(req,res) {
 	var socketID = Math.random()*1000000000 + (new Date()).getTime();
 
 	//if form has been submitted
-	if(req.query.url! == undefined) {
+	if(req.query.url !== undefined) {
 		var url = req.query.url
 
 	//get id from the url
