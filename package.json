@@ -6,6 +6,9 @@
     "express": "3.1.0",
     "jade": "*",
     "twilio-js": ">=0.0.1"
+    "http":"*",
+    "request":"*",
+    "util":"*"
 	    
   }
 }
