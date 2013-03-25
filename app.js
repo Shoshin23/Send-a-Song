@@ -37,10 +37,10 @@ var express = require('express')
 
 
 
-var app = express();
+var app = express.createServer();
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
+ // app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
@@ -97,6 +97,6 @@ app.get("/",function(req,res) {
 //app.get('/', routes.index);
 //app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+app.listen(config.port, function() {
+	console.log("Send A Song server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
